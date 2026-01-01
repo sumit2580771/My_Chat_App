@@ -1,0 +1,174 @@
+# Full-Stack Project
+
+This repository contains both the **frontend (Next.js)** and **backend (Node + TypeScript)** of the project.
+
+---
+
+## 📁 Project Structure
+
+```
+root/
+ ├── frontend/   # Next.js 15 (React 19, Tailwind)
+ └── backend/    # Node.js + TypeScript (compiled to dist/)
+```
+
+---
+
+## 🚀 Tech Stack
+
+### Frontend
+- Next.js 15
+- React 19
+- TailwindCSS
+- Axios
+- Socket.io Client
+- React Hot Toast
+- Moment.js
+
+### Backend
+- Node.js + TypeScript
+- Nodemon
+- Concurrently (dev mode)
+- Compiled output → `dist/`
+
+---
+
+## 🧩 Frontend — Scripts
+
+Path: `frontend/package.json`
+
+| Command | Description |
+|--------|-----------|
+| `npm run dev` | Start Next.js dev server |
+| `npm run build` | Build production bundle |
+| `npm run start` | Start production build |
+| `npm run lint` | Run Next.js lint |
+
+Run frontend dev server:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🧩 Backend — Scripts
+
+Path: `backend/package.json`
+
+| Command | Description |
+|--------|-----------|
+| `npm run dev` | Watch + auto-restart (tsc + nodemon) |
+| `npm run build` | Compile TypeScript to `dist/` |
+| `npm run start` | Run compiled server |
+
+Run backend in dev mode:
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+Build backend for production:
+
+```bash
+npm run build
+npm run start
+```
+
+> The server runs from: `dist/index.js`
+
+---
+
+## ⚙️ Environment Variables
+
+Create `.env` files:
+
+```
+frontend/.env.local
+backend/.env
+```
+
+Add your keys such as:
+
+```
+DATABASE_URL=
+JWT_SECRET=
+API_BASE_URL=
+SOCKET_SERVER_URL=
+```
+
+(Adjust based on your project)
+
+---
+
+## ▶️ Running the Full Stack (Development)
+
+Start backend:
+
+```bash
+cd backend
+npm run dev
+```
+
+Start frontend in another terminal:
+
+```bash
+cd frontend
+npm run dev
+```
+
+---
+
+## 🏗️ Production Build
+
+Backend:
+
+```bash
+cd backend
+npm run build
+npm run start
+```
+
+Frontend:
+
+```bash
+cd frontend
+npm run build
+npm run start
+```
+
+---
+
+## 📌 Folder Naming Recommendation
+
+```
+frontend/   → client UI
+backend/    → API server
+```
+
+Keep separate `.env`, `node_modules`, and builds.
+
+---
+
+## 📝 Notes
+
+- Push only required files — avoid uploading `node_modules`
+- Add a `.gitignore` in both projects
+- Commit build output only if deployment platform requires it
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork and improve the project.
+
+---
+
+## ⭐ Support
+
+If this repo helped you — give it a star 🙂
+
